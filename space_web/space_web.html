@@ -14,7 +14,7 @@
               <span>🪐</span> COSMIC EXPLORER
           </div>
           <div class="nav-links">
-              <a href="#features">Planets Info</a>
+              <a href="#planet">Planets Info</a>
               <a href="#calculator">Weight Calculator</a>
               <a href="#rotation">Planetary Rotation</a>
               <a href="#about">About</a>
@@ -48,5 +48,165 @@
           </div>
       </div>
   </section>
+  <section class="weight-calculator" id="calculator">
+    <h2 class="section-title">Weight Calculator</h2>
+    <div class="calculator-container">
+        <div class="calculator-form">
+            <div class="form-group">
+                <label for="weight">Your Weight (kg)</label>
+                <input type="number" id="weight" placeholder="Enter your weight on Earth" min="1" max="500">
+                <div class="form-group">
+                  <label for="planet">Select Planet</label>
+                  <select id="planet">
+                      <option value="mercury">Mercury</option>
+                      <option value="venus">Venus</option>
+                      <option value="earth" selected>Earth</option>
+                      <option value="mars">Mars</option>
+                      <option value="jupiter">Jupiter</option>
+                      <option value="saturn">Saturn</option>
+                      <option value="uranus">Uranus</option>
+                      <option value="neptune">Neptune</option>
+                  </select>
+              </div>
+              <button class="calculate-button">Calculate Weight</button>
+          </div>
+          <div class="result" id="result">
+              Your weight on <span id="result-planet">Earth</span> would be <span id="result-weight">0</span> kg.
+          </div>
+      </div>
+  </section>
+
   
-  
+    <section class="info-planet" id="info">
+      <h2 class="section-title">Planets Information</h2>
+      <div class="rotation-container">
+          <div class="planet-card">
+              <h3>Mercury</h3>
+              <div class="planet-image mercury">
+                <img src="https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/AW_Mercury_ladprw.jpg"></div>
+              <div class="planet-info">
+                  <p><strong>Rotation Period:</strong> 58.6 Earth days</p>
+                  <p><strong>Orbital Period:</strong> 88 Earth days</p>
+                  <p>Mercury rotates very slowly compared to Earth, completing only three rotations for every two orbits around the Sun.</p>
+              </div>
+          </div>
+          
+          <div class="planet-card">
+              <h3>Venus</h3>
+              <div class="planet-image venus">
+                <img src="http://www.planete-astronomie.com/tl_files/photos/Venus/1-La-planete-Venus/Venus_a00.jpg">
+              </div>
+              <div class="planet-info">
+                  <p><strong>Rotation Period:</strong> 243 Earth days</p>
+                  <p><strong>Orbital Period:</strong> 225 Earth days</p>
+                  <p>Venus has the slowest rotation of any planet and rotates in the opposite direction to most planets.</p>
+              </div>
+          </div>
+          
+          <div class="planet-card">
+              <h3>Earth</h3>
+              <div class="planet-image earth">
+                <img src="https://toppng.com/uploads/preview/real-world-clipart-earth-transparent-background-planet-earth-11562960989brifobuctc.png">
+              </div>
+              <div class="planet-info">
+                  <p><strong>Rotation Period:</strong> 24 hours</p>
+                  <p><strong>Orbital Period:</strong> 365.25 days</p>
+                  <p>Earth's rotation is gradually slowing due to tidal effects from the Moon, adding about 1.7 milliseconds to our day every century.</p>
+              </div>
+          </div>
+          
+          <div class="planet-card">
+              <h3>Mars</h3>
+              <div class="planet-image mars">
+                <img src="https://pngimg.com/uploads/mars_planet/mars_planet_PNG5.png">
+              </div>
+              <div class="planet-info">
+                  <p><strong>Rotation Period:</strong> 24.6 hours</p>
+                  <p><strong>Orbital Period:</strong> 687 Earth days</p>
+                  <p>Mars has a rotation period very similar to Earth's, which gives it a similar day/night cycle.</p>
+              </div>
+          </div>
+          
+          <div class="planet-card">
+              <h3>Jupiter</h3>
+              <div class="planet-image jupiter">
+                <img src="https://www.pngmart.com/files/22/Jupiter-PNG-Free-Download.png">
+              </div>
+              <div class="planet-info">
+                  <p><strong>Rotation Period:</strong> 9.9 hours</p>
+                  <p><strong>Orbital Period:</strong> 11.9 Earth years</p>
+                  <p>Jupiter has the fastest rotation of any planet in our solar system despite being the largest.</p>
+              </div>
+          </div>
+          
+          <div class="planet-card">
+              <h3>Saturn</h3>
+              <div class="planet-image saturn">
+                <img src="https://as2.ftcdn.net/v2/jpg/05/69/56/73/1000_F_569567396_Gxajbwd5eJvZ2uNPkuPDoFLlFUGtiKqE.jpg">
+              </div>
+              <div class="planet-info">
+                  <p><strong>Rotation Period:</strong> 10.7 hours</p>
+                  <p><strong>Orbital Period:</strong> 29.5 Earth years</p>
+                  <p>Like Jupiter, Saturn rotates very quickly. Its rapid rotation causes it to bulge at the equator.</p>
+              </div>
+          </div>
+          
+          <div class="planet-card">
+              <h3>Uranus</h3>
+              <div class="planet-image uranus">
+                <img src="https://www.pngplay.com/wp-content/uploads/13/Uranus-Transparent-Free-PNG.png">
+              </div>
+              <div class="planet-info">
+                  <p><strong>Rotation Period:</strong> 17.2 hours</p>
+                  <p><strong>Orbital Period:</strong> 84 Earth years</p>
+                  <p>Uranus rotates on its side, with an axial tilt of 98 degrees, giving it extreme seasons.</p>
+              </div>
+          </div>
+          
+          <div class="planet-card">
+              <h3>Neptune</h3>
+              <div class="planet-image neptune">
+                <img src="https://pnghq.com/wp-content/uploads/neptune-png-transparent-background.png">
+              </div>
+              <div class="planet-info">
+                  <p><strong>Rotation Period:</strong> 16.1 hours</p>
+                  <p><strong>Orbital Period:</strong> 165 Earth years</p>
+                  <p>Neptune experiences the strongest winds in the solar system, reaching speeds of up to 2,100 km/h.</p>
+              </div>
+              </div>
+              <div class="planet-card">
+                <h3>Sun</h3>
+                <div class="planet-image sun">
+                  <img src="https://clipartcraft.com/images/sun-transparent-realistic-7.png">
+                </div>
+                <div class="planet-info">
+                    <p><strong>Rotation Period:</strong> Equator:~25 Earth days Latitudes:~27 Earth days Poles: ~35 Earth days</p>
+                    <p><strong>Orbital Period:</strong>225 million Earth years</p>
+                    <p>The Sun, a 4.6-billion-year-old blazing ball of plasma, makes up 99.8% of the solar system’s mass, spins every ~25–35 days, and lights up Earth in just 8 minutes.</p>
+                </div>
+                </div>
+                <div class="planet-card">
+                  <h3>Moon</h3>
+                  <div class="planet-image moon">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.YOyAbVJMIWMvagxwYLG5LgHaHa&pid=Api&P=0&h=180">
+                  </div>
+                  <div class="planet-info">
+                      <p><strong>Rotation Period:</strong> 27.3 days</p>
+                      <p><strong>Orbital Period:</strong>27.3 days</p>
+                      <p>The Moon has no atmosphere, so temperatures swing from blazing 127°C in the day to freezing -173°C at night.</p>
+                  </div>
+      </div>
+  </section>
+  <footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#features">Planets</a>
+            <a href="#calculator">Weight Calculator</a>
+            <a href="#rotation">Planetary Rotation</a>
+            <a href="#about">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <p class="copyright">© 2025 Cosmic Explorer. All rights reserved.</p>
+    </div>
+</footer>
+</body>
