@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    background: radial-gradient(ellipse at center, #000 0%, #111 100%);
+    overflow: hidden;
+    background-image: url("https://cdn.hswstatic.com/gif/gettyimages-139494347.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .solar-system {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -40px 0 0 -40px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 30px #FFA500;
+    z-index: 10;
+  }
+  
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate linear infinite;
+    pointer-events: none; /* This makes the orbit not block clicks */
+  }
+  
+  .planet {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    pointer-events: auto; /* This makes planets clickable */
+  }
+  
+  /* Setting progressively higher z-indices for planets farther from the sun */
+  .mercury { background-color: #bbb; z-index: 20; }
+  .venus { background-color: #f5deb3; z-index: 19; }
+  .earth { background-color: #1e90ff; z-index: 18; }
+  .mars { background-color: #ff4500; z-index: 17; }
+  .jupiter { background-color: #e0a538; z-index: 16; }
+  .saturn { background-color: brown; z-index: 15; }
+  .uranus { background-color: #234262; z-index: 14; }
+  .neptune { background-color: blue; z-index: 13; }
+  
+  .planet:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+  }
+  
+  .planet-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+  }
+  
+  .planet-info h3 {
+    margin: 0 0 15px 0;
+    color: #FFA500;
+    font-size: 22px;
+  }
+  
+  .planet-info p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover {
+    color: #FFA500;
+  }
+  
+  .planet-info:target {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+  }
+  
+  /* Orbit sizes and animation durations */
+  .orbit-mercury {
+    width: 120px;
+    height: 120px;
+    animation-duration: 10s;
+  }
+  
+  .orbit-venus {
+    width: 180px;
+    height: 180px;
+    animation-duration: 15s;
+  }
+  
+  .orbit-earth {
+    width: 240px;
+    height: 240px;
+    animation-duration: 20s;
+  }
+  
+  .orbit-mars {
+    width: 300px;
+    height: 300px;
+    animation-duration: 25s;
+  }
+  
+  .orbit-jupiter {
+    width: 340px;
+    height: 340px;
+    animation-duration: 30s;
+  }
+  
+  .orbit-saturn {
+    width: 380px;
+    height: 380px;
+    animation-duration: 35s;
+  }
+  
+  .orbit-uranus {
+    width: 420px;
+    height: 420px;
+    animation-duration: 40s;
+  }
+  
+  .orbit-neptune {
+    width: 460px;
+    height: 460px;
+    animation-duration: 45s;
+  }
+  
+  .legend {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 80%;
+    z-index: 50;
+  }
+  
+  .legend h2 {
+    margin: 0 0 5px 0;
+    color: #FFA500;
+  }
+  
+  .legend p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
