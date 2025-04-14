@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div class="container">
+        <h1>🌌 Weight on Other Planets</h1>
+        <input type="number" id="weightInput" placeholder="Enter your weight on Earth (kg)" />
+        
+        <select id="planetSelect">
+          <option value="0.38">Mercury</option>
+          <option value="0.91">Venus</option>
+          <option value="0.38">Mars</option>
+          <option value="2.34">Jupiter</option>
+          <option value="1.06">Saturn</option>
+          <option value="0.92">Uranus</option>
+          <option value="1.19">Neptune</option>
+          <option value="0.06">Pluto</option>
+        </select>
+        
+        <button onclick="calculateWeight()">Calculate</button>
+        <div class="result" id="resultText"></div>
+      </div>
+    
+      <script>
+        function calculateWeight() {
+          const weight = parseFloat(document.getElementById('weightInput').value);
+          const gravity = parseFloat(document.getElementById('planetSelect').value);
+          const planetName = document.getElementById('planetSelect').options[document.getElementById('planetSelect').selectedIndex].text;
+    
+          if (isNaN(weight) || weight <= 0) {
+            document.getElementById('resultText').textContent = "⚠️ Please enter a valid weight.";
+            return;
+          }
+    
+          const result = (weight * gravity).toFixed(2);
+          document.getElementById('resultText').textContent = `🌍 Your weight on ${planetName} would be ${result} kg.`;
+        }
+      </script>
+</body>
+</html>
