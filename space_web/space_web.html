@@ -213,7 +213,10 @@
   <script>
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".calculate-button");
-  button.addEventListener("click", () => {
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent page refresh (important if inside a form)
+
     const weight = parseFloat(document.getElementById("weight").value);
     const gravity = parseFloat(document.getElementById("planet").value);
     const planetName = document.getElementById("planet").options[document.getElementById("planet").selectedIndex].text;
