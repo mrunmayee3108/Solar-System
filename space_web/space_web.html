@@ -209,32 +209,23 @@
         <p class="copyright">© 2025 Cosmic Explorer. All rights reserved.</p>
     </div>
 </footer>
-<script>
-    document.querySelector('.calculate-button').addEventListener('click', function () {
-        const weight = parseFloat(document.getElementById('weight').value);
-        const planet = document.getElementById('planet').value;
-        const planetName = document.getElementById('planet').options[document.getElementById('planet').selectedIndex].text;
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".calculate-button");
+  button.addEventListener("click", () => {
+    const weight = parseFloat(document.getElementById("weight").value);
+    const gravity = parseFloat(document.getElementById("planet").value);
+    const planetName = document.getElementById("planet").options[document.getElementById("planet").selectedIndex].text;
 
-        const gravityMap = {
-            mercury: 0.38,
-            venus: 0.91,
-            earth: 1,
-            mars: 0.38,
-            jupiter: 2.34,
-            saturn: 1.06,
-            uranus: 0.92,
-            neptune: 1.19
-        };
+    if (isNaN(weight) || weight <= 0) {
+      document.getElementById("result").innerHTML = "⚠️ Please enter a valid weight.";
+      return;
+    }
 
-        if (isNaN(weight) || weight <= 0) {
-            document.getElementById('result').innerHTML = "⚠️ Please enter a valid weight.";
-            return;
-        }
-
-        const resultWeight = (weight * gravityMap[planet]).toFixed(2);
-        document.getElementById('result-planet').textContent = planetName;
-        document.getElementById('result-weight').textContent = resultWeight;
-    });
+    const result = (weight * gravity).toFixed(2);
+    document.getElementById("result").innerHTML = `Your weight on <span id="result-planet">${planetName}</span> would be <span id="result-weight">${result}</span> kg.`;
+  });
+});
 </script>
 
 </body>
