@@ -37,7 +37,7 @@ body {
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: rotate linear infinite;
-    pointer-events: none; /* This makes the orbit not block clicks */
+    pointer-events: none; 
   }
   
   .planet {
@@ -49,11 +49,10 @@ body {
     margin-top: -10px;
     margin-left: -10px;
     border-radius: 50%;
-    transition: transform 0.2s;
-    pointer-events: auto; /* This makes planets clickable */
+    transition: transform 0.9s;
+    pointer-events: auto;
   }
-  
-  /* Setting progressively higher z-indices for planets farther from the sun */
+
   .mercury { background-color: #bbb; z-index: 20; }
   .venus { background-color: #f5deb3; z-index: 19; }
   .earth { background-color: #1e90ff; z-index: 18; }
@@ -119,53 +118,52 @@ body {
     pointer-events: auto;
   }
   
-  /* Orbit sizes and animation durations */
   .orbit-mercury {
     width: 120px;
     height: 120px;
-    animation-duration: 10s;
+    animation-duration: 12s;
   }
   
   .orbit-venus {
     width: 180px;
     height: 180px;
-    animation-duration: 15s;
+    animation-duration: 17s;
   }
   
   .orbit-earth {
     width: 240px;
     height: 240px;
-    animation-duration: 20s;
+    animation-duration: 22s;
   }
   
   .orbit-mars {
     width: 300px;
     height: 300px;
-    animation-duration: 25s;
+    animation-duration: 27s;
   }
   
   .orbit-jupiter {
     width: 340px;
     height: 340px;
-    animation-duration: 30s;
+    animation-duration: 32s;
   }
   
   .orbit-saturn {
     width: 380px;
     height: 380px;
-    animation-duration: 35s;
+    animation-duration: 37s;
   }
   
   .orbit-uranus {
     width: 420px;
     height: 420px;
-    animation-duration: 40s;
+    animation-duration: 42s;
   }
   
   .orbit-neptune {
     width: 460px;
     height: 460px;
-    animation-duration: 45s;
+    animation-duration: 44s;
   }
   
   .legend {
