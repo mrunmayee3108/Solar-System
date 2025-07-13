@@ -1,4 +1,4 @@
-Interactive Solar System 
+**Interactive Solar System website**
 
 Interactive Solar System is a web-based project that allows users to explore interesting facts about our solar system. It includes tools like a weight calculator on different planets, orbital speed data, and distances from the sun. This was created as part of our F.E. Physics mini-project (Sem-2).
 
