@@ -8,7 +8,7 @@ Features:
 * Calculate your weight on different planets based on gravity
 * View the orbital speed of planets around the sun
 * Check the distance of planets from the sun
-* Use of animations (css)
+* Use of animations (styling using css)
 * Simple and responsive design for easy use
 
 How to run: 
@@ -17,7 +17,10 @@ How to run:
 
 
 Credits:
+
 This project was created by:
 * Mrunmayee Potdar
 * Mahi Pendkalkar
 * Ekta Sawant
+
+
