@@ -1,12 +1,23 @@
-This is an interactive solar system website made by Mrunmayee Potdar, Mahi Pendkalkar and Ekta Sawant as a part of our physics mini project for F.E. Sem-2. 
+Interactive Solar System 
 
-This website includes: 
-1. Interesting facts about solar system
-2. Weight calculator on various planets
-3. Information about the orbital speed of various planets
-4. Distance of various planets from the sun
+Interactive Solar System is a web-based project that allows users to explore interesting facts about our solar system. It includes tools like a weight calculator on different planets, orbital speed data, and distances from the sun. This was created as part of our F.E. Physics mini-project (Sem-2).
 
-Technologies used: 
-1. HTML
-2. CSS
 
+Features: 
+* Explore interesting facts about each planet
+* Calculate your weight on different planets based on gravity
+* View the orbital speed of planets around the sun
+* Check the distance of planets from the sun
+* Use of animations (css)
+* Simple and responsive design for easy use
+
+How to run: 
+1. Download or clone the repository.
+2. Open the html file in any modern web browser.
+
+
+Credits:
+This project was created by:
+* Mrunmayee Potdar
+* Mahi Pendkalkar
+* Ekta Sawant
